@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "df8b3b5e-14a2-4595-8925-d10d121ef603",
+		"name": "Clone HubInfo Detran",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35371477",
+		"_collection_link": "https://apidatasync2024.postman.co/workspace/HUB-ApiDataSync-2024~40c95a01-3933-4e92-867b-db0e8ade1d0d/collection/35371477-df8b3b5e-14a2-4595-8925-d10d121ef603?action=share&source=collection_link&creator=35371477"
+	},
+	"item": [
+		{
+			"name": "apidatasync/v2/consulta/detran/sc/veiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/apidatasync/v2/consulta/detran/sc/veiculo?token=28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi&placa=MBM9160&renavam=37166888566",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"apidatasync",
+						"v2",
+						"consulta",
+						"detran",
+						"sc",
+						"veiculo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+						},
+						{
+							"key": "placa",
+							"value": "MBM9160"
+						},
+						{
+							"key": "renavam",
+							"value": "37166888566"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.infosimples.com/api/v2/consultas/detran/sc/veiculo?token=28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_1&timeout=600&placa=QJB-3061&renavam=1142694094",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.infosimples.com/api/v2/consultas/detran/sc/veiculo?token=28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_1&timeout=600&placa=QJB-3061&renavam=1142694094",
+					"protocol": "https",
+					"host": [
+						"api",
+						"infosimples",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"consultas",
+						"detran",
+						"sc",
+						"veiculo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_1"
+						},
+						{
+							"key": "timeout",
+							"value": "600"
+						},
+						{
+							"key": "placa",
+							"value": "QJB-3061"
+						},
+						{
+							"key": "renavam",
+							"value": "1142694094"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apidatasync/v2/consulta/detran/sc/veiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LocalURL}}/apidatasync/v2/consulta/detran/sc/veiculo?token=28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi&placa=JZL5540&renavam=99417396464",
+					"host": [
+						"{{LocalURL}}"
+					],
+					"path": [
+						"apidatasync",
+						"v2",
+						"consulta",
+						"detran",
+						"sc",
+						"veiculo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+						},
+						{
+							"key": "placa",
+							"value": "JZL5540"
+						},
+						{
+							"key": "renavam",
+							"value": "99417396464"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apidatasync/v2/consulta/detran/ms/veiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/apidatasync/v2/consulta/detran/ms/veiculo?token=28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi&placa=HQX2168",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"apidatasync",
+						"v2",
+						"consulta",
+						"detran",
+						"ms",
+						"veiculo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+						},
+						{
+							"key": "placa",
+							"value": "HQX2168"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LocalURL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://4b7b-2804-14d-4c85-a191-bce9-e35c-79fa-22a9.ngrok-free.app",
+			"type": "string"
+		}
+	]
+}

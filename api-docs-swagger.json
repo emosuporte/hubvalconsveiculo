@@ -1,0 +1,433 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Data Sync - EZzapi",
+      "description": "API para consultar informações de veículos nos DETRANs SC, MT e MS",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Servidor local"
+      }
+    ],
+    "paths": {
+      "/apidatasync/v2/consulta/detran/sc/veiculo": {
+        "get": {
+          "summary": "Consulta veículo no DETRAN SC",
+          "parameters": [
+            {
+              "name": "placa",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "MBM9160"
+              },
+              "description": "Placa do veículo"
+            },
+            {
+              "name": "renavam",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "37166888566"
+              },
+              "description": "RENAVAM do veículo"
+            },
+            {
+              "name": "token",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+              },
+              "description": "Token de autenticação"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Requisição bem-sucedida",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Response"
+                  },
+                  "examples": {
+                    "example-1": {
+                      "summary": "Exemplo de resposta bem-sucedida",
+                      "value": {
+                        "code": 200,
+                        "code_message": "A requisição foi processada com sucesso.",
+                        "header": {
+                          "api_version": "v2",
+                          "service": "detran/sc/veiculo",
+                          "parameters": { "placa": "MBM9160", "renavam": "37166888566" },
+                          "client_name": "Minha Empresa",
+                          "token_name": "Token de Produção",
+                          "billable": true,
+                          "price": "0.24",
+                          "requested_at": "2024-06-19T12:00:00Z",
+                          "elapsed_time_in_milliseconds": 386,
+                          "remote_ip": "111.111.111.111",
+                          "signature": "U2FsdGVkX1+xb3O52Vm01c7gW0dTZBtJ8PSfyHqxKGm6ThBvQry8NDjrPumgGLsoK7128sK2nLdM6vG7UE/hpw=="
+                        },
+                        "data_count": 1,
+                        "data": [
+                          {
+                            "dados_do_veiculo": {
+                              "placa": "MBM9160",
+                              "renavam": "37166888566",
+                              "placa_anterior": "AAA1111/AA",
+                              "tipo": "6-AUTOMOVEL",
+                              "categoria": "1-Particular",
+                              "especie": "1-Passageiro",
+                              "lugares": "5",
+                              "marca_modelo": "BMW 116IA 1.6",
+                              "ano_fabricacao_modelo": "2012/2012",
+                              "combustivel": "13-Gasolina-GNV",
+                              "cor": "14-VERDE",
+                              "carroceria": "999-NAO APLICAVEL",
+                              "categoria_dpvat": "1",
+                              "nome_proprietario_atual": "Nome de Exemplo",
+                              "nome_principal_condutor": "Nome de Exemplo",
+                              "recadastro_detran": "DetranNet",
+                              "nome_proprietario_anterior": "Nome de Exemplo",
+                              "origem_dados_veiculo": "CADASTRO",
+                              "municipio_emplacamento": "São Paulo",
+                              "licenciado": "2014 em 15/01/2015 através do Licenciamento Anual on-line (CRLV)",
+                              "data_aquisicao": "11/11/1111",
+                              "situacao": "EM CIRCULAÇÃO",
+                              "observacao": "Exemplo de texto",
+                              "restricao_venda": "Alienação Fiduciária em favor de: A***** C****** F************ E I*********** S*",
+                              "pendencias_financeiras_sng": "",
+                              "restricoes": "ALIE.FIDUCIARIA => CNPJ :. 00.000.000/0000-00",
+                              "normalizado_placa": "MBM9160",
+                              "normalizado_renavam": "37166888566",
+                              "normalizado_data_aquisicao": "11/11/1111"
+                            },
+                            "debitos": {
+                              "debitos": [
+                                {
+                                  "classe": "Exemplo de texto",
+                                  "numero_detran_net": "111.111.111",
+                                  "vencimento": "25/07/2016",
+                                  "valor_nominal": "85,13",
+                                  "multa": "0,00",
+                                  "juros": "0,00",
+                                  "valor_atual": "85,13",
+                                  "normalizado_vencimento": "25/07/2016",
+                                  "normalizado_valor_nominal": 85.13,
+                                  "normalizado_multa": 0.0,
+                                  "normalizado_juros": 0.0,
+                                  "normalizado_valor_atual": 85.13,
+                                  "guia_download_id_expires_at": "1111-11-11T11:11:11.111-11:11",
+                                  "guia_download_id": "U1FsdGVkX..."
+                                }
+                              ],
+                              "taxas_detran": "128,85",
+                              "seguro_dpvat": "0,00",
+                              "ipva": "417,24",
+                              "multas": "617,86",
+                              "normalizado_taxas_detran": 128.85,
+                              "normalizado_seguro_dpvat": 0.0,
+                              "normalizado_ipva": 417.24,
+                              "normalizado_multas": 617.86
+                            }
+                          }
+                        ],
+                        "errors": [],
+                        "site_receipts": [
+                          "https://www.exemplo.com/exemplo-de-url"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Parâmetros faltando",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "examples": {
+                    "example-1": {
+                      "summary": "Parâmetros faltando",
+                      "value": {
+                        "message": "Parâmetros faltando"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "601": {
+              "description": "Token inválido ou não autorizado",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "examples": {
+                    "example-1": {
+                      "summary": "Token inválido",
+                      "value": {
+                        "message": "Token inválido ou não autorizado"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/apidatasync/v2/consulta/detran/mt/veiculo": {
+        "get": {
+          "summary": "Consulta veículo no DETRAN MT",
+          "parameters": [
+            {
+              "name": "placa",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "ABC1234"
+              },
+              "description": "Placa do veículo"
+            },
+            {
+              "name": "renavam",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "12345678901"
+              },
+              "description": "RENAVAM do veículo"
+            },
+            {
+              "name": "cpf",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "12345678900"
+              },
+              "description": "CPF do proprietário"
+            },
+            {
+              "name": "token",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+              },
+              "description": "Token de autenticação"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Requisição bem-sucedida",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Response"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Parâmetros faltando",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "601": {
+              "description": "Token inválido ou não autorizado",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/apidatasync/v2/consulta/detran/ms/veiculo": {
+        "get": {
+          "summary": "Consulta veículo no DETRAN MS",
+          "parameters": [
+            {
+              "name": "placa",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "XYZ9876"
+              },
+              "description": "Placa do veículo"
+            },
+            {
+              "name": "token",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+              },
+              "description": "Token de autenticação"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Requisição bem-sucedida",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Response"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Parâmetros faltando",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "601": {
+              "description": "Token inválido ou não autorizado",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Response": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer",
+              "description": "Código da resposta"
+            },
+            "code_message": {
+              "type": "string",
+              "description": "Mensagem da resposta"
+            },
+            "header": {
+              "type": "object",
+              "properties": {
+                "api_version": {
+                  "type": "string",
+                  "description": "Versão da API"
+                },
+                "service": {
+                  "type": "string",
+                  "description": "Serviço solicitado"
+                },
+                "parameters": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "client_name": {
+                  "type": "string",
+                  "description": "Nome do cliente"
+                },
+                "token_name": {
+                  "type": "string",
+                  "description": "Nome do token"
+                },
+                "billable": {
+                  "type": "boolean",
+                  "description": "Indica se a requisição é faturável"
+                },
+                "price": {
+                  "type": "string",
+                  "description": "Preço da requisição"
+                },
+                "requested_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Data e hora da requisição"
+                },
+                "elapsed_time_in_milliseconds": {
+                  "type": "integer",
+                  "description": "Tempo decorrido da requisição"
+                },
+                "remote_ip": {
+                  "type": "string",
+                  "description": "IP remoto"
+                },
+                "signature": {
+                  "type": "string",
+                  "description": "Assinatura da requisição"
+                }
+              }
+            },
+            "data_count": {
+              "type": "integer",
+              "description": "Número de dados retornados"
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              },
+              "description": "Dados retornados pela requisição"
+            },
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Erros ocorridos durante a requisição"
+            },
+            "site_receipts": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Links para recibos de site"
+            }
+          }
+        },
+        "Error": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "description": "Mensagem de erro"
+            }
+          }
+        }
+      }
+    }
+  }
+  

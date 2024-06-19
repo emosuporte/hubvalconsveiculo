@@ -1,0 +1,155 @@
+{
+  "totalCalls": 16,
+  "totalValue": 62.24,
+  "calls": [
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/sc/veiculo",
+      "params": {
+        "placa": "JZL5540",
+        "renavam": "99417396464",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/mt/veiculo",
+      "params": {
+        "placa": "RRT-6E56",
+        "renavam": "1327434170",
+        "cpf": "87539454172",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/mt/veiculo",
+      "params": {
+        "placa": "RRT-6E56",
+        "renavam": "1327434170",
+        "cpf": "87539454172",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/mt/veiculo",
+      "params": {
+        "placa": "RRT-6E56",
+        "renavam": "1327434170",
+        "cpf": "87539454172",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/mt/veiculo",
+      "params": {
+        "placa": "RRT-6E56",
+        "renavam": "1327434170",
+        "cpf": "87539454172",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    },
+    {
+      "endpoint": "/apidatasync/v2/consulta/detran/mt/veiculo",
+      "params": {
+        "placa": "RRT-6E56",
+        "renavam": "1327434170",
+        "cpf": "87539454172",
+        "token": "28usp0CDZUTGpXfJ-qu0l4Z55-Ha_SQvKvQE7s_EZzapi"
+      },
+      "code": 200
+    }
+  ]
+}
